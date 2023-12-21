@@ -1,0 +1,37 @@
+---
+import UnderlineAnim from "../interactive/underline.astro";
+import SpinGrowAnim from "../interactive/spin-and-grow.astro"; 
+const {
+    title,
+    description, 
+    titleAlign, 
+    img, 
+    containerStyle, 
+} = Astro.props; 
+const iconSize = 50; 
+---
+<div
+    class = `${containerStyle ? containerStyle : "mx-auto md:w-9/12 max-w-[350px] my-10 lg:ml-0 lg:mr-auto"}`
+>
+    <SpinGrowAnim
+        wrapperStyle="mx-auto w-[50px] after:delay-[2000ms]"
+    >
+        <img 
+        src ={img.src}
+        class ="mx-auto"
+        style ={{width: `${iconSize}px`, height: `${iconSize}px`}}
+        alt={title}
+        />
+    </SpinGrowAnim>
+    <UnderlineAnim
+        wrapperStyle="mb-10 mx-auto"
+    >
+        <h4
+            class = "font-secondary text-2xl text-center"
+            style = {{textAlign: titleAlign}}
+        >{title}</h4>
+    </UnderlineAnim>
+    <p
+        class = "font-secondary"
+    >{description}</p>
+</div>

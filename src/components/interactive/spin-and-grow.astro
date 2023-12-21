@@ -1,0 +1,9 @@
+---
+import "./animation.css";
+const {wrapperStyle} = Astro.props; 
+---
+<div
+    class = `spinGrowTag spinGrowHidden ${wrapperStyle}`
+>
+    <slot /> 
+</div>

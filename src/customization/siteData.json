@@ -1,0 +1,24 @@
+{
+	"title": "Prime Cleaning Co.",
+	"business_name": "Prime Cleaning Co.",
+	"description": "Revitalize Your Space with Unmatched Cleanliness",
+	"year_founded": 2012, 
+	"owner_name": "Ron Baker",
+	"owner_email": "Baker.R@primecleaning.com",
+	"address": "813 E Vine St",
+	"city": "Salt Lake City",
+	"state": "UT",
+	"country": "United States",
+	"zip": "84107",
+	"business_email": "info@primecleaning.com",
+	"business_phone": "(385) 411-1025",
+	"image": {
+		"src": "",
+		"alt": ""
+	},
+	"facebook": "https://www.facebook.com",
+	"twitter": "https://www.x.com",
+	"pinterest": "https://www.pinterest.com",
+	"instagram": "https://www.instagram.com",
+	"youtube": "https://www.youtube.com"
+}

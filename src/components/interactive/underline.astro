@@ -1,0 +1,10 @@
+---
+import "./animation.css";
+const {wrapperStyle} = Astro.props; 
+
+---
+<div
+    class = `after:content-[''] w-fit after:w-[80%] after:h-[2px] after:bg-primaryColor after:block after:mx-auto after:z-2 ${wrapperStyle} after:transition-all after:duration-500 underlineTag underline-hidden`
+>
+    <slot /> 
+</div>

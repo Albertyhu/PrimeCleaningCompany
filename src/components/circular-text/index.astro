@@ -1,0 +1,36 @@
+---
+import "./style.css"; 
+const {
+  text = "your satisfacton guaranteed!",
+  R=30,
+  wrapperStyle,
+  containerLength = 500,  
+} = Astro.props; 
+//note: The width and height CicularTextContainer div has to be same as the parent div
+---
+<div
+    id = "CicularTextContainer"
+    class=`mx-auto circleStyle ${wrapperStyle} w-[300px] h-[300px] sm:w-[500px] sm:h-[500px]`
+>
+<svg
+ viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    id="circlePath"
+    d=`M 20, 50
+       a ${R},${R} 0 1,1 ${R*2},0
+       a ${R},${R} 0 1,1 -${R*2},0`
+    stroke-width="0" 
+    fill="none"
+  />
+  <text>
+    <textPath 
+        href="#circlePath"
+        class = "text-[9px] font-secondary"
+        >
+      {text}
+    </textPath>
+  </text>
+</svg>
+</div>

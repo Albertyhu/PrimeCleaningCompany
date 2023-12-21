@@ -1,0 +1,18 @@
+.box_shadow {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.shapeStyle {
+    animation: rotateShape 20s linear infinite; 
+    transform-origin: center; 
+}
+
+
+@keyframes rotateShape {
+    0& {
+        transform: rotateZ(0deg); 
+    }
+    100% {
+        transform: rotateZ(360deg); 
+    }    
+}

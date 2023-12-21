@@ -1,0 +1,56 @@
+---
+import ColumnLabel from './column_label.astro';
+import SiteData from '@/customization/siteData.json'; 
+import { formatPhoneNumber, phoneNumberToNumeric } from "@/hooks/number_hooks.tsx"; 
+---
+<div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+    <div class="footer-widget contact-widget">
+        <div class="widget-title relative block mb-[25px]">
+            <ColumnLabel label = "Contacts" />
+        </div>
+        <div class="widget-content">
+            <ul class="contact-info clearfix">
+                {SiteData.address && SiteData.address != "" && 
+                <li class="relative block mb-[20px]">
+                    <p class="text-lg">{SiteData.address}</p>
+                </li>
+                }
+                {(SiteData.city || SiteData.state || SiteData.country || SiteData.zip) && 
+                    <li class="relative block mb-[20px]">
+                        <p class="text-lg">
+                            {SiteData.city &&
+                            <span>{SiteData.city},</span>
+                            }
+                            {SiteData.state && 
+                            <span>{SiteData.state}</span>
+                            }
+                            {SiteData.zip && 
+                            <span>{SiteData.zip}</span>
+                            }
+                        </p>
+                    </li>
+                }
+                {SiteData.country && 
+                    <li
+                        class="relative block mb-[20px]"
+                    >
+                        <p
+                            class="text-lg"
+                        >{SiteData.country}</p>
+                    </li>
+                }
+                {SiteData.business_phone &&
+                <li class="relative block mb-[20px]">
+                    <p class="text-lg"><a href={`tel:${phoneNumberToNumeric(SiteData.business_phone)}`}>{ formatPhoneNumber(SiteData.business_phone)}</a></p>
+                </li>            
+                }
+                {SiteData.business_email && SiteData.business_email.length > 0 &&
+                <li class="relative block">
+                    <p class="text-lg"><a href={`mailto:${SiteData.business_email}`}>{SiteData.business_email}</a></p>
+                </li>
+                }
+
+            </ul>
+        </div>
+    </div>
+</div>

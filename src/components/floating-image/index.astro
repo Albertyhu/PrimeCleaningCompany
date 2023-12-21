@@ -1,0 +1,17 @@
+---
+const {
+image, 
+label,
+divStyle, 
+imgStyle,  
+} = Astro.props; 
+---
+<div
+    class = `imageStyle ${divStyle}`
+>
+    <img 
+        src = {image.src}
+        class = {imgStyle ? imgStyle : ""}
+        alt = {label ? label : "icon"}
+    />
+</div>

@@ -1,0 +1,29 @@
+---
+import FallFromTop from "./interactive/fallFromTop.astro";
+import FadeInFromTop from "./interactive/fallFromTop.astro"
+import clientLogos from "@/customization/client-logos.js"; 
+
+---
+<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] ">
+    <div class="w-full flex flex-row justify-between items-center gap-12 max-w-[1200px] overflow-x-hidden no-scrollbar">
+
+    
+        {
+            clientLogos.map((logo, index) => 
+            <FallFromTop
+                Delay = {index * 500}
+            >
+                <div
+                    class = "w-[100px] h-full"
+                >
+                    <img 
+                        class = "w-full h-full object-fit"                
+                        src={logo.img} 
+                        alt="" 
+                        />
+                </div>
+            </FallFromTop>
+            )
+        }
+    </div>
+</section>
