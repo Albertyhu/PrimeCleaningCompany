@@ -1,6 +1,6 @@
 ---
 import siteData from "../customization/siteData.json";
-import jsonLDGenerator from "../util/jsonLD";
+import jsonLDGenerator from "../utils/jsonLD.js";
 const {
   title,
   description,
@@ -49,4 +49,4 @@ const jsonLD = jsonLDGenerator({
 {robots && <meta name="robots" content="noindex, nofollow" />}
 
 <!-- JSON LD -->
-<Fragment set:html={jsonLD} />../utils/jsonLD
+<Fragment set:html={jsonLD} />

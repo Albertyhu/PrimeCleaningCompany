@@ -26,7 +26,7 @@ const CountTo100 = (props: CounterType) => {
   return (
     <div className="relative block text-4xl text-[35px] sm:text-[70px] leading-none text-black font-['Prata',serif]">
       <span
-        className = "text-white"
+        className = "text-black"
       >{count}</span>
     </div>
   );

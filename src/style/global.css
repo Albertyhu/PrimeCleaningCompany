@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "DM Serif Display";
+    src: local("DMSerifDisplay-Regular"),
+     url('/fonts/DMSerifDisplay-Regular.ttf') format("truetype");
+    font-style: normal; 
+    font-weight: 400; 
+    }
+    
+@font-face {
+    font-family: "DMSerifDisplay-Italic";
+    src: local("DMSerifDisplay-Italic"),
+        url('/fonts/DMSerifDisplay-Italic.ttf') format("truetype");
+    font-weight: 400;
+    }

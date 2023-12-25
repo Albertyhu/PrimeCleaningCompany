@@ -1,0 +1,44 @@
+---
+const projects = [
+	{
+		img: '/project1.png',
+		name: 'Modern Kitchen',
+		text: 'Decor / Artchitecture'
+	},
+	{
+		img: '/project2.png',
+		name: 'Modern Bedroom',
+		text: 'Decor / Artchitecture'
+	},
+	{
+		img: '/project3.png',
+		name: 'Modern Dining Hall',
+		text: 'Decor / Artchitecture'
+	},
+	{
+		img: '/project4.png',
+		name: 'Modern Living Room',
+		text: 'Decor / Artchitecture'
+	},
+]
+
+---
+<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[10px] ">
+    <h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full lg:max-w-[50%] pb-2 mx-auto">Follow Our Projects</h2>
+    <p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[60%] mx-auto">It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-[104px] lg:gap-y-[56px] mt-12 lg:mt-[93px]">
+        {
+        projects.map((proj) => {
+            return (
+                <div class="w-full flex flex-col gap-4">
+                <img src={proj.img} alt="" />
+                        <p class="flex flex-col tracking-tight leading-9">
+                            <span class="text-primary-200 text-lg lg:text-[25px] font-dm">{proj.name}</span>
+                            <span class="text-text-gray-200 text-base lg:text-lg font-jost">{proj.text}</span>
+                        </p>
+                </div>
+        )
+    })
+    }
+    </div>
+</section>

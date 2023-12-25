@@ -3,6 +3,13 @@ import CircularPicture from './circular-pic.astro';
 import FallFromTop from '../interactive/fallFromTop.astro'
 import UnderlineAnim from '../interactive/underline.astro'
 import ReasonPanel from './reason-panel.astro'; 
+type reasonType = {
+    title: string,
+    description: string, 
+    titleAlign: string, 
+    img: any, 
+    containerStyle: string, 
+}
 const {
     image, 
     paragraph="Clents choose Prime Cleaning Co. for an unparalleled cleaning experience that goes beyond the ordinary. Our commitment to excellence is evident in every meticulous detail, from our skilled team and innovative cleaning technology to our eco-friendly practices. Trust us to transform your space into a pristine haven, where cleanliness meets precision. Elevate your living or working environment with Prime Cleaning Co. – where perfection is our promise and your satisfaction is our priority.",
@@ -35,7 +42,7 @@ const {
         class = "hidden lg:block mr-0 ml-auto w-fit"
     >
         {reasons && reasons.length && 
-            reasons.slice(0,2).map(reason => 
+            reasons.slice(0,2).map((reason: reasonType) => 
             <ReasonPanel
              {...reason} 
              containerStyle = "sm:w-1/12 md:w-9/12 max-w-[350px] my-10 mr-0 ml-auto"
@@ -52,15 +59,15 @@ const {
             class = "block lg:hidden"
         >
             {reasons && reasons.length && 
-                reasons.slice(0,2).map(reason => <ReasonPanel {...reason} /> )
+                reasons.slice(0,2).map((reason: reasonType) => <ReasonPanel {...reason} /> )
             }
         </div>
         <div>
             {reasons && reasons.length && 
-                reasons.slice(2,5).map(reason => 
+                reasons.slice(2,5).map((reason: reasonType)  => 
                 <ReasonPanel 
                     {...reason} 
-                    containerStyle = "md:w-9/12 max-w-[350px] my-10 mx-auto lg:mr-auto lg:ml-0 "
+                    containerStyle = "mx-auto w-10/12 md:w-9/12 max-w-[350px] my-10 mx-auto lg:mr-auto lg:ml-0 "
                 /> 
                 )
             }

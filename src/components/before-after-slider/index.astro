@@ -1,0 +1,36 @@
+---
+import image1 from "@/assets/images/cleaning-before-and-after-faucet1.jpg";
+import image2 from "@/assets/images/cleaning-before-and-after-faucet2.jpg"; 
+import "./style.css";
+const wrapperStyle = "absolute inset-0 w-[400px] mx-auto"
+import Slider from './slider.tsx'; 
+const imgStyle = ""; 
+const HEIGHT_MOBILE = 500;  
+const {
+  HEIGHT = 419,  
+} = Astro.props; 
+---
+<div 
+  class='hidden sm:block relative mx-auto  my-[100px]'
+  style ={{height:`${HEIGHT}px`}}
+>
+  <Slider 
+    HEIGHT = {419}
+    WIDTH = {500}
+    bgImg = "./before-after/office2-sm.webp"
+    fgImg= "./before-after/office1-sm.webp"
+    client:only = "react" 
+    />
+</div>
+<div 
+  class='block sm:hidden relative mx-auto  my-[100px]'
+  style ={{height:`${HEIGHT_MOBILE}px`}}
+>
+  <Slider 
+    HEIGHT = {210}
+    WIDTH = {300}
+    bgImg = "./before-after/office2-xm.webp"
+    fgImg= "./before-after/office1-xm.webp"
+    client:only = "react" 
+    />
+</div>

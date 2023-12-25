@@ -26,7 +26,7 @@ const FallItem = (props) =>{
 
     return(
          <div
-             className='transition-all duration-[500ms] RiseFadeOut relative my-10 md:my-1 m-auto w-[100px] h-fit justify-center'
+             className='transition-all duration-[500ms] RiseFadeOut relative my-10 md:my-1 m-auto w-[80px] sm:w-[100px] h-fit justify-center'
              ref={itemRef}
          >
             <img

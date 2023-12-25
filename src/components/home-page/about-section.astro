@@ -1,0 +1,24 @@
+---
+import FadeIn from "../interactive/fadeIn.astro";
+import Button from "../buttons/button";
+import CallIcon from "@/icons/call";
+import SiteData from "@/customization/siteData.json"; 
+---
+<section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 flex flex-col-reverse justify-center items-center lg:grid grid-cols-2 gap-[75px] pt-[100px] lg:pt-[200px]">
+    <div class="flex flex-col gap-8 max-w-[472px] items-center lg:items-start py-6">
+        <FadeIn><h2 class="text-[30px] text-center capitalize lg:text-left font-dm tracking-wide leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">Over 10 years of experience</h2></FadeIn>
+        <p class="text-base md:text-[22px] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">At Prime Cleaning Co., we transcend the ordinary, bringing a sense of calm and balance to the art of cleaning. Our meticulous services go beyond the surface, creating spaces that radiate tranquility. With a commitment to eco-friendly practices, innovative cleaning technology, and a team dedicated to perfection, we redefine cleanliness as a blissful and Zen experience. Discover a new level of serenity in your home or business with Blissful Zen – where every clean is a moment of pure harmony.</p>
+        <div class="flex gap-4 pt-3 items-center">
+            <CallIcon/>
+            <p class="flex flex-col text-text-gray-200 font-jost tracking-tight">
+                <span class="text-base sm:text-2xl font-bold leading-9 ">{SiteData.business_phone}</span>
+                <span class="text-lg sm:text-[22px] leading-8">Call Us Anytime</span>
+            </p>
+        </div>
+        <Button text="Get Free Estimate"/>
+    </div>
+
+    <div>
+        <img src="/about-img.png" alt="" />
+    </div>
+</section>

@@ -1,194 +1,54 @@
 ---
 import MainLayout from '../layouts/main-layout.astro'
-import Button from '../components/buttons/link.astro'
-import ArrowSec from '../icons/arrow-sec.tsx'
-import CallIcon from "../icons/call.tsx"
-import FadeIn from '@/components/interactive/fadeIn.astro';
 import FallFromTop from "@/components/interactive/fallFromTop.astro"
-import SiteData from "@/customization/siteData.json" 
 import ExperienceSection from "@/components/experience_section/index.astro"; 
 import LogoGrid from '@/components/interactive/sequential-falling/index.tsx'
 import clientLogos from "@/customization/client-logos.js"; 
-import CircleText from "@/components/circular-text/index.astro"
-import Satisfaction from "@/components/satisfaction_guaranteed/index.astro";
 import BackgroundVid from "@/components/cleaning-background/index.astro"; 
 import WhyChooseUs from "@/components/uniqueness/index.astro"
 import SmilingChild from "@/assets/images/smiling-child.jpg"
 import uniqueness from "@/customization/uniqueness"; 
 import Underline from '@/components/interactive/underline.astro';
-import CleaningWorker from "@/assets/images/cleaner.png"
-
-const services = [
-  {
-    title: "Deep Cleaning",
-    text: "Transform your living space with our comprehensive deep cleaning services. Our skilled team meticulously tackles dirt, grime, and hidden dust, ensuring every nook and cranny is spotless. From baseboards to light fixtures, we leave nothing untouched, providing a fresh and rejuvenated ambiance for your home."
-  },
-  {
-    title: "Commercial Cleaning",
-    text: "Boost your business's image with our professional commercial cleaning services. From office spaces to retail establishments, we understand the unique cleaning needs of commercial properties. Our team is equipped to provide a pristine and sanitized environment, ensuring a positive and welcoming atmosphere for your clients and employees alike."
-  },
-  {
-    title: "Event and Post-Construction Cleaning",
-    text: "Hosting a special event or dealing with post-construction chaos? Our event and post-construction cleaning services are here to save the day. We go beyond standard cleaning, addressing the unique challenges of event aftermath or construction debris, leaving your space pristine and ready for its next purpose."
-  },
-
-];
-
-const reviews = [
-	{
-		img: '/natasha.png',
-		name: 'Emily T',
-		location: 'Draper, UT',
-		review: 'I can\'t thank Prime Cleaning Co. enough for their exceptional service. The deep cleaning they performed in my home was beyond thorough. Every room felt like new, and the attention to detail was impeccable. I highly recommend their services for anyone seeking a truly transformative cleaning experience.'
-	},
-	{
-		img: '/benny.png',
-		name: 'Mark S.',
-		location: 'Midvale, UT',
-		review: 'As a busy professional, I rely on Prime Cleaning Co. for their regular maintenance services, and they never disappoint. The team is punctual, efficient, and leaves my home consistently spotless. It\'s a relief to come home to a clean and organized space. I wouldn\'t trust anyone else with the care of my home.'
-	},
-	{
-		img: '/raymond.png',
-		name: 'Tom P.',
-		location: 'Salt Lake City, UT',
-		review: 'The pet-friendly cleaning services from Prime Cleaning Co. have been a game-changer for our family. With three furry companions, keeping the house clean can be a challenge. Their team uses safe and effective products, and our home now smells fresh and feels healthier. Thank you for going above and beyond!'
-	},
-]
-
-const projects = [
-	{
-		img: '/project1.png',
-		name: 'Modern Kitchen',
-		text: 'Decor / Artchitecture'
-	},
-	{
-		img: '/project2.png',
-		name: 'Modern Bedroom',
-		text: 'Decor / Artchitecture'
-	},
-	{
-		img: '/project3.png',
-		name: 'Modern Dining Hall',
-		text: 'Decor / Artchitecture'
-	},
-	{
-		img: '/project4.png',
-		name: 'Modern Living Room',
-		text: 'Decor / Artchitecture'
-	},
-]
-
-const experiences = [
-	{
-		num: 12,
-		text:'Years Of Experiance'
-	},
-	{
-		num: 85,
-		text:'Success Project'
-	},
-	{
-		num: 15,
-		text:'Active Project'
-	},
-	{
-		num: 95,
-		text:'Happy Customers'
-	},
-]
-
+import ProjectsSection from '@/components/home-page/projects-section.astro';
+import ReviewSection from "@/components/home-page/reviews-section.astro"; 
+import AboutSection from "@/components/home-page/about-section.astro";  
+import ServicesSection from "@/components/home-page/services-section.astro"; 
+import HeroBanner from '@/components/home-page/hero-banner.astro';
+import experiences from "@/customization/experience.js"; 
+import ExperienceCounter from '@/components/experience_section/experience_counter';
+import Slider from '@/components/before-after-slider/index.astro'; 
 ---
-
-<MainLayout title = 'Interior Design Home'>
+<MainLayout 
+	title = 'Interior Design Home'
+	customDescription="Elevate your living or working environment with Prime Cleaning Co. – where perfection is our promise and your satisfaction is our priority."
+	CTA ={true}
+	>
 
 	<!-- Banner -->
-
-	<section class="w-full bg-hero bg-no-repeat bg-cover h-screen lg:min-h-[110vh] px-12 xl:px-0 flex items-center relative">
-		<div class="lg:max-w-[1200px] w-full mx-auto flex flex-col z-[1]">
-			<FadeIn>
-				<h1 class="text-[40px] leading-[50px] md:text-[60px] xl:text-[85px] pb-4 font-dm md:leading-[106.25px] w-full xl:max-w-[50%] text-primary-200">Achieve a Peace of Mind</h1>
-			</FadeIn>
-			<p class="text-base md:text-[22px] pb-5 font-jost text-text-gray-200 w-full lg:max-w-[50%]">Elevate Your Living and Working Experiences with Unmatched Cleanliness</p>
-			<Button 
-				text="Get Started"
-				link="./contact"
-			/>
-		</div>
-	</section>
+	<HeroBanner />
 
 	<!-- Services Section -->
-	<div
-		class = "mt-[100px] mx-auto text-center"
-	>
-		<FallFromTop
-			wrapperStyle = "mx-auto"
-		>
-			<h2
-				class = "font-bold text-4xl font-dm text-center mx-auto"
-			>What we do</h2>
-		</FallFromTop>
-	</div>
-	<section class="lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row lg:flex-wrap px-12 xl:px-0 w-full mx-auto pt-[20px] lg:pt-[10px] justify-between ">
-		{
-			services.map((service) => {
-				return (
-					<div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
-						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
-						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
-					</div>
-				)
-			})
-		}
-	</section>
+	<ServicesSection />
 
 	<!-- About Section -->
-
-	<section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 flex flex-col-reverse justify-center items-center lg:grid grid-cols-2 gap-[75px] pt-[100px] lg:pt-[200px]">
-		<div class="flex flex-col gap-8 max-w-[472px] items-center lg:items-start py-6">
-			<FadeIn><h2 class="text-[30px] text-center capitalize lg:text-left font-dm tracking-wide leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">Over 10 years of experience</h2></FadeIn>
-			<p class="text-base md:text-[22px] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">At Prime Cleaning Co., we transcend the ordinary, bringing a sense of calm and balance to the art of cleaning. Our meticulous services go beyond the surface, creating spaces that radiate tranquility. With a commitment to eco-friendly practices, innovative cleaning technology, and a team dedicated to perfection, we redefine cleanliness as a blissful and Zen experience. Discover a new level of serenity in your home or business with Blissful Zen – where every clean is a moment of pure harmony.</p>
-			<div class="flex gap-4 pt-3 items-center">
-				<CallIcon/>
-				<p class="flex flex-col text-text-gray-200 font-jost tracking-tight">
-					<span class="text-2xl font-bold leading-9 ">{SiteData.business_phone}</span>
-					<span class="text-[22px] leading-8">Call Us Anytime</span>
-				</p>
-			</div>
-			<Button text="Get Free Estimate"/>
-		</div>
-
-		<div>
-			<img src="/about-img.png" alt="" />
-		</div>
-	</section>
-
+	<AboutSection />
 	<!-- What People Think About Us Section -->
-
-	<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] ">
-	<div class="w-full flex flex-col bg-primary-300 rounded-[48px] px-6 py-[88px]">
-		<h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full lg:max-w-[50%] pb-9 mx-auto">What Our Clients Think About Us</h2>
-		<div class="flex flex-col gap-8 lg:gap-10 lg:flex-row justify-between">
-			{
-			reviews.map((rev) => {
-				return (
-					<div class="w-full bg-white max-w-[370px] px-[37px] py-[53px] rounded-3xl mx-auto flex flex-col justify-center gap-4 md:gap-6">
-						<div class="flex flex-col sm:flex-row gap-6 items-center">
-							<img src={rev.img} alt="" />
-							<p class="flex flex-col tracking-tight leading-9">
-								<span class="text-primary-200 text-lg lg:text-[25px] font-dm">{rev.name}</span>
-								<span class="text-text-gray-200 text-base lg:text-lg font-jost">{rev.location}</span>
-							</p>
-						</div>
-						<p class="font-jost tracking-tight leading-8 text-base text-center sm:text-left text-text-gray lg:text-[22px]">{rev.review}</p>
-					</div>
-			)
-		})
-		}
-		</div>
+	<WhyChooseUs 
+	image = {SmilingChild}
+	reasons = {uniqueness}
+	/>
+	<div 
+    class="w-full max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-y-10 lg:justify-center items-center overflow-x-hidden no-scrollbar"
+    >
+    {
+        experiences.map((exp, i) => {
+            return(
+                <ExperienceCounter text={exp.text} num={exp.num} i={i} client:visible />
+            )
+        })
+    }
 	</div>
-	</section>
-
-	<!-- Client Logo Section -->
+	<ReviewSection />
 	<Underline 
 		wrapperStyle="mx-auto text-center my-10 sm:my-20"
 	>
@@ -197,42 +57,16 @@ const experiences = [
 			class = "font-dm text-3xl"
 		>Companies serviced</h3>
 		</FallFromTop>
-	</Underline>
+	</Underline>	
 	<LogoGrid 
 		data = {clientLogos}
 		client:only = "react"
 	/>
-	<!-- <CircleText 
-		text = "Achieve a clean space and a peace of mind."
-	/> -->
 	<BackgroundVid />
-	<WhyChooseUs 
-		image = {SmilingChild}
-		reasons = {uniqueness}
-	/>
 	<!-- Projects Section -->
-
-	<section class="lg:max-w-[1200px] px-12 xl:px-0 w-full mx-auto pt-[100px] lg:pt-[200px] ">
-		<h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full lg:max-w-[50%] pb-2 mx-auto">Follow Our Projects</h2>
-		<p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[60%] mx-auto">It is a long established fact that a reader will be distracted by the of readable content of page  lookings at its layouts  points.</p>
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-[104px] lg:gap-y-[56px] mt-12 lg:mt-[93px]">
-			{
-			projects.map((proj) => {
-				return (
-					<div class="w-full flex flex-col gap-4">
-					<img src={proj.img} alt="" />
-							<p class="flex flex-col tracking-tight leading-9">
-								<span class="text-primary-200 text-lg lg:text-[25px] font-dm">{proj.name}</span>
-								<span class="text-text-gray-200 text-base lg:text-lg font-jost">{proj.text}</span>
-							</p>
-					</div>
-			)
-		})
-		}
-		</div>
-	</section>
-	<ExperienceSection />
-</MainLayout>
+	<ProjectsSection />	
+	<Slider />
+</MainLayout> 
  
 
 <style>

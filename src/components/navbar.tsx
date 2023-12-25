@@ -15,7 +15,7 @@ const Navbar = () => {
       <a href="/">
         {" "}
         <div
-          className = "h-full w-[300px]"
+          className = "h-full w-[230px] sm:w-[300px]"
         >
           <img 
             src = {Logo.src}
@@ -71,7 +71,7 @@ const Navbar = () => {
         <motion.nav
           initial={{ opacity: 0, x: 25 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex flex-col fixed h-screen bg-white w-[75%] md:w-[90%] text-black bottom-0 left-0 gap-6 items-center justify-center"
+          className="flex flex-col fixed h-screen bg-white w-[75%] md:w-[90%] text-black bottom-0 left-0 gap-6 items-center justify-center z-10"
         >
           <a href="/" className={linkStyle}>
             Home

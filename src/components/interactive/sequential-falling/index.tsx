@@ -42,13 +42,13 @@ const ItemGrid = (props : {data: Array<FallingItemType>, customGrid?: string}) =
     return(
     <div
         id="FallItemsGrid"
-        className ="fallingItemsGridTag"
+        className ="fallingItemsGridTag  min-h-[400px] sm:min-h-[0px] sm:h-[150px]"
         ref = {gridRef}
     >
          {display &&
             <div
                 id = "FallItemWrapper"
-                className="flex flex-row flex-wrap mx-auto w-full gap-[10px] sm:gap-[20px] justify-evenly h-[300px] sm:h-[150px]"
+                className="grid grid-cols-2 sm:flex flex-row flex-wrap mx-auto w-full gap-[10px] sm:gap-[20px] justify-evenly h-full"
                 >
                 {data.map((item: FallingItemType, index : number) => 
                     <FallItem 

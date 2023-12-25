@@ -13,13 +13,12 @@ import siteData from "@/customization/siteData.json"
         <div class="col-span-1 md:col-span-2">
           <a href="/" class="">
             <Logo 
-              customDiv = "h-full w-full"
+              customDiv = "h-fit w-full"
               customImg = "w-full"
             />
           </a>
           <p class="tracking-tight text-base lg:text-[22px] lg:leading-[33px] font-jost text-text-gray pt-[18px] pb-[33px]">
-            It is a long established fact that a reader will be distracted
-            lookings.
+            {siteData.description}
           </p>
           <div class="flex gap-5 md:gap-[54px]">
             <a href="/">

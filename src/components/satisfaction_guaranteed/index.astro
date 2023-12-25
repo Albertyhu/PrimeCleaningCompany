@@ -10,7 +10,7 @@ const {
 } = Astro.props; 
 ---
 <div
-    class = {containerStyle ? containerStyle : "relative border-solid mx-auto flex items-center justify-center w-[300px] h-[300px] sm:w-[500px] sm:h-[500px]"}
+    class = {containerStyle ? containerStyle : "relative border-solid mx-auto flex items-center justify-center w-[210px] h-[210px]  xm:w-[300px] xm:h-[300px] sm:w-[500px] sm:h-[500px]"}
 >
     <CircularText 
         wrapperStyle = "absolute inset-0" 
@@ -27,10 +27,10 @@ const {
     </svg>
     </div>
     <div
-        class = 'rounded-full box_shadow absolute inset-0 bg-white m-auto justify-center w-[150px] h-[150px] sm:w-[250px] sm:h-[250px]'
+        class = 'rounded-full box_shadow absolute inset-0 bg-white m-auto justify-center w-[120px] h-[120px] xm:w-[150px] xm:h-[150px] sm:w-[250px] sm:h-[250px]'
     >
         <p
-            class = 'font-bold text-center font-secondary max-w-[150px] text-xl sm:text-2xl block top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] relative z-[2]'
+            class = 'font-bold text-center font-secondary max-w-[150px] text-base xm:text-xl sm:text-2xl block top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] relative z-[2]'
         >{mainText}</p>
     </div>
 </div>

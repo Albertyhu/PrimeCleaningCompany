@@ -19,7 +19,7 @@ const Experience = ({
           number = {num}
         />
       </h5>
-      <p className="text-white text-base text-center lg:text-lg font-jost tracking-tight lg:leading-9">
+      <p className="text-black text-base text-center lg:text-lg font-jost tracking-tight lg:leading-9">
         {text}
       </p>
     </div>

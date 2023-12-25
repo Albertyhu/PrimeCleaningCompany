@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./button.tsx";
+import Button from "./buttons/button.tsx";
 
 const ContactForm = () => {
   return (
