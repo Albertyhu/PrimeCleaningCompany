@@ -1,5 +1,8 @@
 import {useState, useEffect, useRef} from 'react'; 
 import "./style.css";
+//bgImg is the background image 
+//fgImg is the foreground image that will change in width 
+//HEIGHT AND WIDTH are the dimensions of the image file in pixels. They have to be exact and accurate.
 type SliderType = {
     bgImg: string, 
     fgImg: string,
@@ -60,7 +63,7 @@ const Slider = (props : SliderType) =>{
                 max={WIDTH} 
                 value={width}
                 onChange= {handleChange}
-                className="relative block mx-auto top-[50%] translate-y-[-50%] my-auto"  
+                className="relative block top-[95%] translate-y-[-95%] sm:top-[75%] sm:translate-y-[-75%] mx-auto my-auto"  
                 style = {{width: `${WIDTH}px`}}
                 name='slider'
                 id="slider" 

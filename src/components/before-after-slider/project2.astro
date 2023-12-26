@@ -1,0 +1,40 @@
+---
+import "./style.css";
+const wrapperStyle = "absolute inset-0 w-[400px] mx-auto"
+import Slider from './slider.tsx'; 
+const imgStyle = ""; 
+const {
+  HEIGHT = 512,  
+  HEIGHT_MOBILE = 602,
+} = Astro.props; 
+---
+<div
+  class = "flex flex-row text-center font-dm text-2xl sm:text-3xl mt-[100px] justify-around w-[300px] mx-auto"
+>
+  <h3>Before</h3><h3> | </h3> <h3>After</h3>
+</div>
+
+<div 
+  class='hidden sm:block relative mx-auto'
+  style ={{height:`${HEIGHT}px`}}
+>
+  <Slider 
+    HEIGHT = {1027}
+    WIDTH = {512}
+    fgImg = "./before-after/office_table/before-sm.webp"
+    bgImg= "./before-after/office_table/after-sm.webp"
+    client:only = "react" 
+    />
+</div>
+<div 
+  class='block sm:hidden relative mx-auto'
+  style ={{height:`${HEIGHT_MOBILE}px`}}
+>
+  <Slider 
+    HEIGHT = {602}
+    WIDTH = {300}
+    fgImg = "./before-after/office_table/before-smallest.webp"
+    bgImg= "./before-after/office_table/after-smallest.webp"
+    client:only = "react" 
+    />
+</div>
