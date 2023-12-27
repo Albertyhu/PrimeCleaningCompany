@@ -10,7 +10,7 @@ export interface QuoteProps {
 
 const QuoteText = ({ text, name }: QuoteProps) => {
   return (
-    <div className="flex w-full max-w-full lg:max-w-[80%]">
+    <div className="flex w-11/12 mx-auto sm:w-full max-w-full lg:max-w-[80%] mt-10">
       <LeftPattern />
       <div className="flex flex-col w-full items-center justify-center gap-4 lg:gap-8 lg:mx-[-30px]">
         <Quote />

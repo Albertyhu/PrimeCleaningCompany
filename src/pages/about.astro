@@ -5,12 +5,14 @@ import  Facebook  from '../icons/facebook.tsx';
 import  Twitter  from '../icons/twitter.tsx';
 import  LinkedIn  from '../icons/linkedin.tsx';
 import Instagram  from '../icons/instagram.tsx';
-
+import CTAsection from "@/components/CTA-section/index.astro"; 
+import WhatWeDo from "@/components/about-page/what-we-do.astro"; 
 ---
-
-
-<MainLayout title = 'Interior Design About Us'>
-
+<MainLayout 
+  title = 'Interior Design About Us'
+  customDescription="Learn more about the history of Prime Cleaning Co."
+  CTA = {false}
+  >
   <!-- Banner Section -->
   <section class="w-full bg-about h-[50vh] flex justify-center items-end">
     <div class="py-[30px] lg:py-[41px] px-[60px] lg:px-[152px] flex flex-col justify-center items-center bg-white rounded-tl-[37px] rounded-tr-[37px] gap-2.5">
@@ -18,19 +20,15 @@ import Instagram  from '../icons/instagram.tsx';
       <p class="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"> <a href="/">Home</a> / About Us </p>
     </div>
   </section>
-  <!-- Quote Section -->
-
-  <section class="w-full px-12 lg:px-0 pt-[100px] lg:pt-[200px] lg:max-w-[1200px] mx-auto flex items-center justify-center">
-    <QuoteText text="I like an interior that defies labeling. I don't really want someone to walk into a room and know that I did it" name="BUNNY WILLIAMS"/>
-  </section>
-
+  <!-- <AboutSection /> -->
   <!-- What We Do Section -->
-
+  <WhatWeDo />
+  
   <section class="w-full pt-[100px] lg:pt-[150px] px-12 lg:px-0 mx-auto lg:max-w-[1200px] ">
-    <div class="w-full flex flex-col-reverse lg:flex-row justify-between gap-10 items-center">
+    <div class="w-full flex flex-col-reverse lg:flex-row-reverse justify-between gap-24 items-center">
       <div class="flex flex-col gap-6">
-        <h2 class="text-[30px] text-center lg:text-left font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">We what we do</h2>
-        <p class="text-base md:text-[22px] lg:max-w-[85%] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.</p>
+        <h2 class="text-[30px] text-center lg:text-left font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">What the Process Looks Like:</h2>
+        <p class="text-base md:text-[22px] lg:max-w-[95%] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">Our cleaning process is a symphony of precision and care. It starts with understanding your unique requirements, followed by meticulous planning and execution. Our skilled team employs cutting-edge technology and eco-friendly practices to deliver a thorough and efficient clean. From the initial consultation to the final sparkling result, the Prime Cleaning Co. process is designed for excellence.</p>
       </div>
       <img src="/about1.png" alt="">
     </div>
@@ -40,53 +38,24 @@ import Instagram  from '../icons/instagram.tsx';
 
    <section class="w-full pt-[100px] lg:pt-[150px] px-12 lg:px-0 mx-auto lg:max-w-[1200px] ">
     <div class="w-full flex flex-col-reverse lg:flex-row-reverse justify-between gap-24 items-center">
-      <div class="flex flex-col gap-6">
-        <h2 class="text-[30px] text-center lg:text-left font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">The End Result</h2>
-        <p class="text-base md:text-[22px] lg:max-w-[95%] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using that it has a more-or-less normal.</p>
-      </div>
       <img src="/about2.png" alt="">
+      <div class="flex flex-col gap-6">
+        <h2 class="text-[30px] text-center lg:text-left font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">What We Will Deliver for You</h2>
+        <p class="text-base md:text-[22px] lg:max-w-[95%] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">Choosing Prime Cleaning Co. means choosing an unparalleled standard of cleanliness. We pledge to deliver not just a clean space but an environment of blissful tranquility. With our attention to detail, skilled professionals, and commitment to your satisfaction, we promise a living or working space that reflects the Prime standard – where every corner is a testament to our dedication to perfection.</p>
+      </div>
     </div>
   </section>
 
   <!-- What People Think About Us Section -->
-
-  <section class="w-full py-[100px] lg:py-[185px] mt-[173px] px-12 lg:px-0 mx-auto bg-primary-300 ">
-    <div class="w-full flex flex-col gap-10 lg:max-w-[1200px] mx-auto" >
-		  <h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full lg:max-w-[50%] pb-9 mx-auto">What the People Thinks About Us</h2>
-      <div class="flex w-full overflow-x-scroll gap-4 flex-row no-scrollbar">
-        <img src="/person1.png" alt="">
-        <img src="/person2.png" alt="">
-        <div class="flex flex-col gap-10 w-full justify-between py-[70px] px-7 bg-white min-w-[284px] items-center rounded-[32px]">
-          <p class="flex flex-col tracking-tight leading-9 text-center">
-            <span class="text-primary-200 text-lg lg:text-[25px] font-dm">Nattasha Julie</span>
-            <span class="text-text-gray-200 text-base lg:text-lg font-jost"> Design, Australia</span>
-					</p>
-          <div class="flex gap-6">
-             <a href="/">
-              <Facebook />
-            </a>
-            <a href="/">
-              <Twitter />
-            </a>
-            <a href="/">
-              <LinkedIn />
-            </a>
-            <a href="/">
-              <Instagram />
-            </a>
-          </div>
-          <p class="flex flex-col tracking-tight leading-9 text-center">
-            <span class="text-text-gray-200 text-base lg:text-lg font-jost"> +1 (378) 400-1234</span>
-            <span class="text-text-gray-200 text-base lg:text-lg font-jost"> julie@email.com</span>
-					</p>
-        </div>
-        <img src="/person3.png" alt="">
-      </div>
-	  </div>
-  </section>
-
+  <!-- Quote Section -->
+  <div class = "w-full h-fit [&>*]:mx-auto">
+    <QuoteText 
+      text="As a business owner, I needed a cleaning service that understands the unique needs of a commercial space. Prime Cleaning Co. not only met but exceeded my expectations. Their efficiency and commitment to quality make them my go-to for maintaining a pristine office environment. Highly recommended!"
+      name="BUNNY WILLIAMS"
+      />
+  </div>
+  <CTAsection />
 </MainLayout>
-
 <style>
 
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -101,3 +70,31 @@ import Instagram  from '../icons/instagram.tsx';
   }
 
 </style>
+<script is:inline>
+  	const callback = (entries) => {
+		entries.forEach((entry, index)=>{
+			if(entry.isIntersecting){
+				if(entry.target.classList.contains("fadeInTag"))
+				{
+          console.log('fired')
+					entry.target.classList.remove("fadeOut")
+				}
+			}
+			else{
+				if(entry.target.classList.contains("fadeInTag"))
+				{
+					entry.target.classList.add("fadeOut")
+				}
+			}
+		})
+	}
+	const options = {
+		threshold: 0.1, 
+	} 
+
+	const observer = new IntersectionObserver(callback, options)
+	const FadeIn = document.getElementsByClassName("fadeInTag");
+	for(var i = 0; i < FadeIn.length; i++){
+			observer.observe(FadeIn[i])
+	}
+</script>

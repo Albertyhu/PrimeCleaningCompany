@@ -1,0 +1,50 @@
+---
+import CleanerSmallest from "@/assets/images/cleaner1-smallest.webp"
+import CleanerSM from "@/assets/images/cleaner1-sm.webp"
+import { Code } from "astro:components";
+import SiteData from "@/customization/siteData.json"; 
+import CleanerFigure from "@/assets/images/cleaner.png"
+import AddGroup from "@/assets/icons/add-group.png"
+import "@/style/global.css"
+const {
+
+
+} = Astro.props; 
+---
+<section class="w-full pt-[100px] lg:pt-[150px] px-12 lg:px-0 mx-auto lg:max-w-[1200px] ">
+    <div class="w-full flex flex-col-reverse lg:flex-row justify-between gap-10 items-center">
+        <div class="flex flex-col gap-6">
+            <h2 class="text-[30px] text-center lg:text-left font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">What we do</h2>
+            <p class="text-base md:text-[22px] lg:max-w-[85%] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">At Prime Cleaning Co., we do more than clean. We create transformative experiences. Our comprehensive services span residential and commercial cleaning, moving in/out solutions, and specialized event cleaning. From deep cleaning to organization, we tailor our expertise to meet the unique needs of every space, ensuring a spotless result that exceeds expectations.</p>
+        </div>
+        <!-- person -->
+        <div 
+        id="person_block"
+        class="relative w-full h-fit block sm:mb-[100px]"
+        >
+            <div class="w-[250px] h-[250px] mx-auto relative rounded-full bg-primaryColor sm:w-[470px] sm:h-[470px]"></div>
+            <div class="absolute top-[153px] hidden sm:block right-[-75px] w-[150px] h-[219px] bg-no-repeat bg-[url('../src/assets/images/shape/shape-19.png')]"></div>
+            <figure class="absolute w-[200px] left-[50%] translate-x-[-50%] bottom-0 z-[5] block sm:w-[375px] h-auto">
+                <img 
+                    src={CleanerFigure.src}
+                    alt="about-us-image"
+                    class ="object-cover w-full h-full mx-auto"
+                    >
+            </figure>
+            <div 
+                id="circle_info"
+                class="block absolute sm:rounded-full centered about-box-shadow bg-white z-[6] sm:w-[270px] sm:h-[270px] bottom-0 justify-center lg:translate-x-[-75px]">
+                <div class="grid !m-auto w-fit h-fit text-center sm:top-[50%] sm:left-[50%] sm:translate-x-[-50%] sm:translate-y-[-50%] relative">
+                    <div class="hidden sm:block relative text-6xl theme_color leading-[60px] mb-[12px]">
+                        <img 
+                        src={AddGroup.src}
+                        alt="people icon"
+                        class="w-[50px] h-[50px] m-auto"
+                        >
+                    </div>
+                    <h4 class="text-xl leading-[32px] font-medium">5K+ People Choose {SiteData.business_name}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
