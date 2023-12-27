@@ -1,9 +1,6 @@
 ---
-import experiences from '@/customization/experience.js'
-import ExperienceCounter from './experience_counter.tsx'
 import FurnitureImg from "@/assets/images/furniture.jpg"; 
 import FadeIn from "../interactive/fadeIn.astro"; 
-import { Code } from 'astro:components';
 import './style.css'
 import Button from "../buttons/link.astro"; 
 ---
@@ -30,12 +27,12 @@ style = {{backgroundImage: `url(${FurnitureImg.src})`}}
         <FadeIn>
             <h3 
                 class = "font-dm text-white text-2xl sm:text-4xl"
-            >Get in touch with us</h3>
+            >Are you interested in working with us?</h3>
         </FadeIn>
-        <p>Ready to Experience Prime Clean? Click below to Schedule Your Sparkling Transformation! Because a Spotless Home is a Happy Home – Let's Prime It Up!</p>
+        <p>Schedule Your Sparkling Transformation! Because a Spotless Home is a Happy Home – Let's Prime It Up!</p>
     </div>
     <Button 
-        text = "Contact Us"
+        text = "Get in Touch"
         link = "./contact"
     />
 </div> 

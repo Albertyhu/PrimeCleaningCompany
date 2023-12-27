@@ -4,7 +4,7 @@ const wrapperStyle = "absolute inset-0 w-[400px] mx-auto"
 import Slider from './slider.tsx'; 
 const imgStyle = ""; 
 const {
-  HEIGHT = 512,  
+  HEIGHT = 850,  
   HEIGHT_MOBILE = 602,
 } = Astro.props; 
 ---
@@ -13,9 +13,8 @@ const {
 >
   <h3>Before</h3><h3> | </h3> <h3>After</h3>
 </div>
-
 <div 
-  class='hidden sm:block relative mx-auto'
+  class='hidden sm:block relative mx-auto pb-10 overflow-y-hidden'
   style ={{height:`${HEIGHT}px`}}
 >
   <Slider 

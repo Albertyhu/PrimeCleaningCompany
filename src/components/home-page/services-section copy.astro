@@ -1,0 +1,46 @@
+---
+import FallFromTop from "../interactive/fallFromTop.astro";
+const services = [
+  {
+    title: "Deep Cleaning",
+    text: "Transform your living space with our comprehensive deep cleaning services. Our skilled team meticulously tackles dirt, grime, and hidden dust, ensuring every nook and cranny is spotless. From baseboards to light fixtures, we leave nothing untouched, providing a fresh and rejuvenated ambiance for your home."
+  },
+  {
+    title: "Commercial Cleaning",
+    text: "Boost your business's image with our professional commercial cleaning services. From office spaces to retail establishments, we understand the unique cleaning needs of commercial properties. Our team is equipped to provide a pristine and sanitized environment, ensuring a positive and welcoming atmosphere for your clients and employees alike."
+  },
+  {
+    title: "Event and Post-Construction Cleaning",
+    text: "Hosting a special event or dealing with post-construction chaos? Our event and post-construction cleaning services are here to save the day. We go beyond standard cleaning, addressing the unique challenges of event aftermath or construction debris, leaving your space pristine and ready for its next purpose."
+  },
+
+];
+import Underline from "../interactive/underline.astro";
+
+---
+<div
+class = "mt-[100px] mx-auto text-center"
+>
+<Underline
+  wrapperStyle = "mx-auto"
+>
+<FallFromTop
+>
+    <h2
+        class = "font-bold text-4xl font-dm text-center mx-auto"
+    >What we can help you with</h2>
+</FallFromTop>
+</Underline>
+</div>
+<section class="lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row lg:flex-wrap px-12 xl:px-0 w-full mx-auto pt-[20px] lg:pt-[10px] justify-between ">
+    {
+        services.map((service) => {
+            return (
+                <div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
+                    <h3 class="text-primaryColor text-center font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+                    <p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
+                </div>
+            )
+        })
+    }
+</section>

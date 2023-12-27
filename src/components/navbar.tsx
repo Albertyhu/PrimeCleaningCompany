@@ -12,14 +12,16 @@ const Navbar = () => {
   const linkStyle = "text-xl leading-6 font-jost text-primary-200";
 
   return (
-    <>
+    <div
+      className = 'w-full fixed z-10 bg-white'
+    >
       <div
-        className = "bg-primaryColor w-full h-[30px] flex flex-row text-white justify-between px-[45px] font-jos [&>*]:my-auto"
+        className = "hidden sm:flex bg-primaryColor w-full h-[30px] flex-row text-white justify-between px-[45px] font-jos [&>*]:my-auto"
       >
         <div>Call Us: <a href = {`tel:${SiteData.business_phone}`}>{SiteData.business_phone}</a></div>
         <div>Email: {SiteData.business_email}</div>
       </div>
-      <div className="max-w-[1200px] px-12 xl:px-0 m-auto w-full py-11 flex justify-between items-center">
+      <div className="max-w-[1200px] bg-white px-12 xl:px-0 m-auto w-full py-5 flex justify-between items-center">
         <a href="/">
           {" "}
           <div
@@ -96,7 +98,7 @@ const Navbar = () => {
           </motion.nav>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import Mail from "../icons/mail.tsx";
 import Phone from "../icons/phone.tsx";
 import Web from "../icons/web.tsx";
+import SiteData from "@/customization/siteData.json"
 
 const ContactInfo = () => {
   return (

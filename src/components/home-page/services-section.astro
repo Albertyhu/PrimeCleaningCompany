@@ -16,31 +16,101 @@ const services = [
 
 ];
 import Underline from "../interactive/underline.astro";
+import ServiceLabel from './service-text-component.astro'; 
+import ServiceImg from './serviceImageComponent.astro';
+import ServiceWrapper from './serviceWrapper.astro';  
+import MobileServiceComponent from "./mobileServiceComponent.astro";
+import {
+  CleaningSurface,
+    Residential, 
+    Pet,
+    Office, 
+    Moving,
+    GreenCleaning,
+    Event, 
+} from '@/utils/service-images.js'; 
 
 ---
 <div
-class = "mt-[100px] mx-auto text-center"
+class = "mt-[100px] mb-[20px] mx-auto text-center"
 >
-<Underline
-  wrapperStyle = "mx-auto"
->
-<FallFromTop
->
-    <h2
-        class = "font-bold text-4xl font-dm text-center mx-auto"
-    >What we do</h2>
-</FallFromTop>
-</Underline>
+  <Underline
+    wrapperStyle = "mx-auto my-10"
+  >
+  <FallFromTop
+  >
+      <h2
+          class = "text-2xl font-dm text-center mx-auto"
+      >What we can help you with</h2>
+  </FallFromTop>
+  </Underline>
+  <p
+    class = "font-jos px-5"
+  >We are committed to keep your space clean and <span class="text-primaryColor">prime</span>. At Prime Cleaning Co., we are committed to providing phenomenal customer service with the goal of helping you achieve tranquility in your environment.</p>
 </div>
-<section class="lg:max-w-[1200px] flex flex-col gap-8 lg:gap-10 lg:flex-row lg:flex-wrap px-12 xl:px-0 w-full mx-auto pt-[20px] lg:pt-[10px] justify-between ">
-    {
-        services.map((service) => {
-            return (
-                <div class="w-full max-w-[358px] mx-auto flex flex-col justify-center items-center gap-3 md:gap-5">
-                    <h3 class="text-primaryColor text-center font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
-                    <p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
-                </div>
-            )
-        })
-    }
+<section class="hidden w-full h-fit sm:grid grid-cols-2 lg:grid-cols-4">
+  <ServiceWrapper>
+    <ServiceLabel 
+    label = "RESIDENTIAL CLEANING"
+    subtitle = "Affordable and smooth"
+    /> 
+    <ServiceImg 
+    image = {Residential}
+    altText = "Residential Cleaning"
+    />
+  </ServiceWrapper>
+  <ServiceWrapper>
+    <ServiceImg 
+      image = {Office}
+      altText = "Commercial Cleaning"
+    />
+    <ServiceLabel 
+      label = "Commercial Cleaning"
+      subtitle = "Make an impression"
+    />
+  </ServiceWrapper>
+  <ServiceWrapper>
+    <ServiceLabel 
+    label = "MOVING IN/OUT CLEANING"
+    subtitle = "Headache-free transition"
+    /> 
+    <ServiceImg 
+    image = {Moving}
+    altText = "MOVING IN/OUT CLEANING"
+    />
+  </ServiceWrapper>
+  <ServiceWrapper>
+    <ServiceImg 
+      image = {Event}
+      altText = "EVENT CLEANING"
+    />
+    <ServiceLabel 
+      label = "Event Cleaning"
+      subtitle = "Pre- and post-cleaning work"
+    />
+  </ServiceWrapper>
+</section>
+<section
+  class="grid sm:hidden w-full h-fit"  
+>
+  <MobileServiceComponent 
+    label = "Residential Cleaning"
+    subtitle = "Affordable and smooth"
+    image = {Residential}
+  />
+  <MobileServiceComponent 
+    label = "Commercial Cleaning"
+    subtitle = "Make an impression"
+    image = {Office}
+  />
+  <MobileServiceComponent 
+    label = "Moving In/Out Cleaning"
+    subtitle = "Headache-free transition"
+    image = {Moving}
+  />
+  <MobileServiceComponent 
+    label = "Events Cleaning"
+    subtitle = "Pre- and post-cleaning work"
+    image = {Event}
+  />
 </section>

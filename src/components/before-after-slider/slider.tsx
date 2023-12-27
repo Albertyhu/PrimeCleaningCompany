@@ -48,7 +48,8 @@ const Slider = (props : SliderType) =>{
                 style={{height:`${HEIGHT}px`, width: `${WIDTH}px`}}
             >
                 <div
-                    className = {`relative h-full w-[250px] overflow-hidden`}
+                    className = {`relative h-full overflow-hidden`}
+                    style = {{width: width}}
                     ref = {afterRef}
                 >
                     <div
