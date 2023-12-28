@@ -4,6 +4,8 @@ import useMediaQuery from "../utils/useMediaQuery.ts";
 import { motion } from "framer-motion";
 import Logo from "@/assets/PrimeCleaningCo.png"
 import SiteData from "@/customization/siteData.json"
+import Phone from "@/assets/icons/phone.png";
+import Mail from "@/assets/icons/mail.png"; 
 
 const Navbar = () => {
   const [toggled, setToggled] = useState(false);
@@ -18,8 +20,13 @@ const Navbar = () => {
       <div
         className = "hidden sm:flex bg-primaryColor w-full h-[30px] flex-row text-white justify-between px-[45px] font-jos [&>*]:my-auto"
       >
-        <div>Call Us: <a href = {`tel:${SiteData.business_phone}`}>{SiteData.business_phone}</a></div>
-        <div>Email: {SiteData.business_email}</div>
+        <div className="flex flex-row">
+            <img src = {Phone.src} alt = "phone icon" className = "w-[20px] h-[20px] my-auto mr-[5px] "/> Call Us: <a href = {`tel:${SiteData.business_phone}`}>{SiteData.business_phone}</a>
+        </div>
+        <div className="flex flex-row">
+        <img src = {Mail.src} alt = "phone icon" className = "w-[20px] h-[20px] my-auto mr-[5px] "/> 
+          Email: {SiteData.business_email}
+        </div>
       </div>
       <div className="max-w-[1200px] bg-white px-12 xl:px-0 m-auto w-full py-5 flex justify-between items-center">
         <a href="/">

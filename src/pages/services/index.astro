@@ -1,0 +1,220 @@
+---
+import MainLayout from '@/layouts/main-layout.astro'
+import One from "../../icons/one"
+import Two from "../../icons/two"
+import Three from "../../icons/three"
+import Four from "../../icons/four"
+import ServiceIconOne from "../../icons/service1-icon"
+import ServiceIconTwo from "../../icons/service2-icon"
+import ServiceIconThree from "../../icons/service3-icon"
+import ServiceIconFour from "../../icons/service4-icon"
+import services from '@/customization/services'
+import SectionWrapper from "@/components/service-page/sectionWrapper.astro"; 
+
+// const services = [
+// 	{
+// 		title: 'Project Plan',
+// 		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+// 	},
+// 	{
+// 		title: 'Interior Work',
+// 		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+// 	},
+// 	{
+// 		title: 'Realization',
+// 		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+// 	},
+// 	{
+// 		title: '2d/3d Art Work',
+// 		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+// 	},
+// 	{
+// 		title: 'Retail design',
+// 		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+// 	},
+// 	{
+// 		title: 'Decoration Work',
+// 		text: 'There are many variations of the passages of lorem Ipsum from available, majority.'
+// 	},
+// ]
+
+const howWeWorkDetails = [
+  {
+    imgIcon: ServiceIconOne,
+    numIcon: One,
+    img: '/service1.png',
+    title: "Initial Consultation",
+    info: "The Prime Cleaning Co. experience begins with a personalized consultation. We take the time to understand your unique needs, the specific areas you want us to focus on, and any special requirements you may have."
+  },
+  {
+    imgIcon: ServiceIconTwo,
+    numIcon: Two,
+    img: '/service2.png',
+    title: "Customized Cleaning Plan",
+    info: "Following the consultation, our experienced team crafts a customized cleaning plan tailored to your space. Whether it's a residential haven, a bustling office, or a venue hosting a special event, our plan is designed to address every nook and cranny."
+  },
+  {
+    imgIcon: ServiceIconThree,
+    numIcon: Three,
+    img: '/service3.png',
+    title: "Meticulous Execution",
+    info: "With the plan in place, our skilled and professional cleaning team swings into action. Employing cutting-edge technology, eco-friendly practices, and attention to detail, we meticulously execute the cleaning process."
+  },
+  {
+    imgIcon: ServiceIconFour,
+    numIcon: Four,
+    img: '/service4.png',
+    title: "Quality Assurance and Feedback",
+    info: "Our commitment to excellence doesn't end with the cleaning process. We conduct thorough quality assurance checks to ensure that every aspect of our service meets the Prime standard. Your feedback is invaluable to us, and we welcome your thoughts on the cleaning results."
+  },
+]
+---
+<MainLayout 
+  title = 'Interior Design Services'
+  customDescription = "Browse our myriad of services that we have to offer."
+  CTA={true}
+  >
+
+  <!-- Banner Section -->
+
+  <section class="w-full bg-services h-[50vh] flex justify-center items-end">
+    <div class="py-[30px] lg:py-[41px] px-[60px] lg:px-[152px] flex flex-col justify-center items-center bg-white rounded-tl-[37px] rounded-tr-[37px] gap-2.5">
+      <h1 class="text-[30px] leading-[40px] lg:text-[50px] lg:leading-[62px] font-dm capitalize text-primary-200 ">Services</h1>
+      <p class="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"> <a href="/">Home</a> / Services </p>
+    </div>
+  </section>
+
+  	<!-- Services Section -->
+  <SectionWrapper>
+    <h2>The Prime Promise: Our Guarantee to You</h2>
+    <p>At Prime Cleaning Co., our commitment to excellence extends beyond the meticulous cleaning of spaces; it is embedded in our core values and woven into the fabric of every service we provide. We understand the significance of inviting a cleaning service into your home or business, and with that understanding comes The Prime Promise – our unwavering commitment to your satisfaction and peace of mind.</p>    
+  </SectionWrapper>
+  <SectionWrapper>
+    <h2>Reliability You Can Trust:</h2>
+    <p>Our promise begins with reliability. When you choose Prime Cleaning Co., you're choosing a team dedicated to punctuality, consistency, and a level of service you can depend on. We understand the value of your time and strive to deliver a seamless and efficient cleaning experience that respects your schedule.</p>
+  </SectionWrapper>
+  <SectionWrapper>
+    <h2>Exceptional Attention to Detail:</h2>
+<p>Our guarantee extends to the meticulous attention to detail that defines Prime Cleaning Co. From the tiniest crevice to the most expansive spaces, we leave no stone unturned. Our skilled team takes pride in ensuring that every corner of your home or office receives the meticulous care it deserves, leaving you with a space that radiates cleanliness and perfection.</p>
+  </SectionWrapper>
+  <SectionWrapper>
+    <h2>Customer-Centric Approach:</h2>
+<p>The Prime Promise is rooted in our customer-centric philosophy. We listen to your unique needs, tailor our services accordingly, and evolve to meet and exceed your expectations. Your satisfaction is not just a goal; it's our priority, and we go the extra mile to ensure that every Prime Cleaning Co. experience is a positive and gratifying one.</p>
+  </SectionWrapper>
+  <SectionWrapper>
+    <h2>Transparent Communication:</h2>
+<p>Open and transparent communication is at the heart of The Prime Promise. From the initial consultation to the completion of our services, we keep you informed every step of the way. We believe in building trust through clear communication, ensuring that you are well-informed and confident in the quality of our work.</p>
+  </SectionWrapper>
+  <SectionWrapper>
+    <h2>Our Satisfaction Guarantee:</h2>
+<p>Above all, The Prime Promise includes our satisfaction guarantee. If, for any reason, you're not completely satisfied with our service, we'll make it right. Your contentment is the measure of our success, and we stand firmly behind the quality of our work.</p>
+
+<p>With The Prime Promise, we invite you to experience a new standard of cleaning services – where reliability, attention to detail, customer-centricity, transparent communication, and satisfaction guarantee come together to create an unparalleled cleaning experience. Trust Prime Cleaning Co. for a spotless space and a promise kept.</p>
+  </SectionWrapper>
+	<section 
+    class="lg:max-w-[1200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 lg:gap-y-12 xl:px-0 w-full mx-auto pt-[10px] justify-between"
+    >
+		{
+			services.map((service) => {
+				return (
+					<div class="w-full max-w-[358px] md:min-h-[300px] mx-auto flex rounded-[30px] hover:bg-primary-300 p-5 flex-col items-center gap-3 md:gap-5">
+            <div
+              class = ""
+            >
+              <img 
+                src = {service.icon.src}
+                class = "w-[50px] h-[50px] object-fit"
+                alt = {service.title}
+              />
+            </div>
+						<h3 class="text-text-blue text-center font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
+						
+					</div>
+				)
+			})
+		}
+	</section>
+
+  <!-- How We Work Section -->
+  <section class="px-12 xl:px-0 w-full mt-[100px] lg:mt-[200px] min-h-screen ">
+   <div class="w-full lg:max-w-[1200px] p-12 mx-auto lg:px-[116px] lg:py-[160px] bg-primary-300 rounded-[70px] ">
+     <h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full capitalize lg:max-w-[50%] pb-2 mx-auto">How We Work</h2>
+		<p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[60%] mx-auto">Our team follows a professional procedure to deliver an outstanding services and results.</p>
+
+    <div class="pt-[70px] lg:pt-[100px] flex flex-col gap-[70px] ">
+      <!-- Inner Sections -->
+
+      {
+        howWeWorkDetails.map((detail, index) => {
+          const ImageIcon = detail.imgIcon
+          const NumberIcon = detail.numIcon
+          const className = `flex justify-between flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-[50px] items-center max-w-[967px]`
+
+          return(
+            <div class={className}>
+              <img src={detail.img} alt=""/>
+              <div class="flex flex-col gap-12 lg:gap-[58px]">
+                <div class="justify-between hidden lg:flex">
+                  <ImageIcon />
+                  <NumberIcon/>
+                </div>
+                <div class="flex flex-col gap-3">
+                  <h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{detail.title}</h3>
+                  <p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px]">{detail.info}</p>
+                </div>
+              </div>
+            </div>
+          )
+        })
+      }
+
+      <!-- Inner Sections End -->
+    </div>
+   </div>
+  </section>
+
+</MainLayout>
+
+<style>
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+
+</style>
+<script is:inline>
+  const callback = (entries) => {
+  entries.forEach((entry, index)=>{
+    if(entry.isIntersecting){
+      if(entry.target.classList.contains("fadeInTag"))
+      {
+        console.log('fired')
+        entry.target.classList.remove("fadeOut")
+      }
+    }
+    else{
+      if(entry.target.classList.contains("fadeInTag"))
+      {
+        entry.target.classList.add("fadeOut")
+      }
+    }
+  })
+}
+const options = {
+  threshold: 0.1, 
+} 
+
+const observer = new IntersectionObserver(callback, options)
+const FadeIn = document.getElementsByClassName("fadeInTag");
+for(var i = 0; i < FadeIn.length; i++){
+    observer.observe(FadeIn[i])
+}
+</script>
