@@ -1,15 +1,15 @@
 const experiences = [
 	{
 		num: 12,
-		text:'Years Of Experiance'
+		text:'Years Of Experience'
 	},
 	{
 		num: 85,
-		text:'Success Project'
+		text:'Successful Projects'
 	},
 	{
 		num: 15,
-		text:'Active Project'
+		text:'Active Projects'
 	},
 	{
 		num: 95,

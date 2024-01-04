@@ -1,4 +1,4 @@
-import Logo from "@/assets/PrimeCleaningCo.png"
+import Logo from "@/assets/PrimeCleaningCo2.webp"
 
 const LogoDiv = (props) =>{
     const {

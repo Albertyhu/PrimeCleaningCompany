@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        hero: "url('/banner.png')",
+        hero: "url('/banner.webp')",
+        hero_sm: "url('/banner-sm.webp')",
+        hero_smallest: "url('/banner-smallest.webp')",
         main: "url('/Background.jpg')",
         about: "url('/aboutpage-bg.png')",
         services: "url('/servicespage-bg.jpg')",
@@ -28,6 +30,7 @@ module.exports = {
           400: "#E2E2E2",
         },
         primaryColor:  "#cda274", 
+        secondaryClr: "#1cc8ee",
         text: {
           blue: "#1B2534",
           gray: "#4D4F52",

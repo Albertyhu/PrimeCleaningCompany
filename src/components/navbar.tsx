@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-//import Logo from "../icons/logo.tsx";
+import Logo from "./logo.tsx";
 import useMediaQuery from "../utils/useMediaQuery.ts";
 import { motion } from "framer-motion";
-import Logo from "@/assets/PrimeCleaningCo.png"
+//import Logo from "@/assets/PrimeCleaningCo2.png" 
 import SiteData from "@/customization/siteData.json"
 import Phone from "@/assets/icons/phone.png";
 import Mail from "@/assets/icons/mail.png"; 
@@ -30,16 +30,9 @@ const Navbar = () => {
       </div>
       <div className="max-w-[1200px] bg-white px-12 xl:px-0 m-auto w-full py-5 flex justify-between items-center">
         <a href="/">
-          {" "}
-          <div
-            className = "h-full w-[230px] sm:w-[300px]"
-          >
-            <img 
-              src = {Logo.src}
-              alt="logo"
-              className = "w-full h-full object-fit"
-            />
-          </div>
+          <Logo 
+            customDiv = "w-full h-[80px]"
+          />
         </a>
 
         {/* Nav List for Desktop */}
