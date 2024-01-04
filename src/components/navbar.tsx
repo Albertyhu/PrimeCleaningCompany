@@ -47,6 +47,9 @@ const Navbar = () => {
             <a href="/services" className={linkStyle}>
               Services
             </a>
+            <a href="/FAQ" className={linkStyle}>
+              FAQ
+            </a>
             <a href="/contact" className={linkStyle}>
               Contact Us
             </a>
