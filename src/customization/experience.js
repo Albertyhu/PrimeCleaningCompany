@@ -1,19 +1,22 @@
+import Calendar from "@/assets/icons/calendar.png";
+import Badge from "@/assets/icons/badge.png";
+import Smiley from "@/assets/icons/smiley.png"; 
+
 const experiences = [
 	{
 		num: 12,
-		text:'Years Of Experience'
+		text:'Years Of Experience',
+		icon: Calendar, 
 	},
 	{
-		num: 85,
-		text:'Successful Projects'
+		num: 1233,
+		text:'Successful Projects', 
+		icon: Badge, 
 	},
 	{
-		num: 15,
-		text:'Active Projects'
-	},
-	{
-		num: 95,
-		text:'Happy Customers'
+		num: 125,
+		text:'Happy Customers',
+		icon: Smiley, 
 	},
 ]
 

@@ -24,7 +24,7 @@ style = {{backgroundImage: `url(${FurnitureImg.src})`}}
     {
         experiences.map((exp, i) => {
             return(
-                <ExperienceCounter text={exp.text} num={exp.num} i={i} client:visible />
+                <ExperienceCounter text={exp.text} num={exp.num} i={i} icon ={exp.icon} client:visible />
             )
         })
     }

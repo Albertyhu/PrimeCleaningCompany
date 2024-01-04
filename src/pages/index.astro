@@ -42,7 +42,7 @@ import ExperienceCounter from '@/components/experience_section/experience_counte
     {
         experiences.map((exp, i) => {
             return(
-                <ExperienceCounter text={exp.text} num={exp.num} i={i} client:visible />
+                <ExperienceCounter text={exp.text} num={exp.num} i={i} icon={exp.icon} client:visible />
             )
         })
     }

@@ -1,0 +1,61 @@
+---
+export const prerender = true;
+import MainLayout from "@/layouts/main-layout.astro";
+import {faqs} from "@/customization/FAQ.js"; 
+import Accordion from "@/components/accordion_component/index.tsx"; 
+import Graphics from '@/components/parallax-graphics/graphicsWrapper.astro'
+import type { AccordionType } from '@/utils/interface';
+---
+<MainLayout
+title="Frequently Asked Questions"
+customDescription = "Have questions about our service? We can answer them here."
+CTA={true}
+>
+
+  <!-- Banner Section -->
+
+<section class="w-full bg-faq h-[50vh] flex justify-center items-end">
+<div class="py-[30px] lg:py-[41px] px-[60px] lg:px-[152px] flex flex-col justify-center items-center bg-white rounded-tl-[37px] rounded-tr-[37px] gap-2.5">
+    <h1 class="text-[30px] leading-[40px] lg:text-[50px] lg:leading-[62px] font-dm capitalize text-primary-200 ">Frequently Asked Questions</h1>
+    <p class="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"> <a href="/">Home</a> / FAQ </p>
+</div>
+</section>
+<section 
+    class = "w-11/12 mx-auto"
+>
+    <div class = "grid sm:grid-cols-2">
+        <Accordion 
+            data = {faqs as Array<AccordionType>}
+            client:load
+        />
+        <Graphics />
+    </div> 
+</section>
+</MainLayout>
+<script is:inline>
+    const callback = (entries) => {
+      entries.forEach((entry, index)=>{
+          if(entry.isIntersecting){
+              if(entry.target.classList.contains("fadeInTag"))
+              {
+                  entry.target.classList.remove("fadeOut")
+              }
+          }
+          else{
+              if(entry.target.classList.contains("fadeInTag"))
+              {
+                  entry.target.classList.add("fadeOut")
+              }
+          }
+      })
+  }
+  const options = {
+      threshold: 0.1, 
+  } 
+
+  const observer = new IntersectionObserver(callback, options)
+  const FadeIn = document.getElementsByClassName("fadeInTag");
+  for(var i = 0; i < FadeIn.length; i++){
+          observer.observe(FadeIn[i])
+  }
+</script>

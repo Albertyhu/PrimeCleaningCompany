@@ -1,0 +1,24 @@
+:root{
+    --durationTime : 500ms; 
+}
+
+.box_shadow {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.collapsibleDiv {
+    transition: max-height var(--durationTime) ease;  
+    max-height: 300px;
+}
+
+.collapsed {
+    max-height: 0px; 
+}
+
+.arrowStyle {
+    transition: transform var(--durationTime) ease;
+}
+
+.downArrow {
+    transform: rotate(180deg); 
+}
