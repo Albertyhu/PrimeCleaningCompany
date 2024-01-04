@@ -95,6 +95,9 @@ const Navbar = () => {
             <a href="/services" className={linkStyle}>
               Services
             </a>
+            <a href="/FAQ" className={linkStyle}>
+              Frequently Asked Questions
+            </a>
             <a href="/contact" className={linkStyle}>
               Contact Us
             </a>
