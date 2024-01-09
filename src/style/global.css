@@ -16,3 +16,27 @@
 .about-box-shadow{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
+
+.pattern-layer {
+    animation: slide 60s linear infinite;
+    -webkit-animation: slide 60s linear infinite;
+}
+    
+
+@keyframes slide {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 1920px 0;
+	}
+}
+
+@-webkit-keyframes slide {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 1920px 0;
+	}
+}

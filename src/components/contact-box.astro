@@ -4,7 +4,13 @@ import Phone from "../icons/phone.tsx";
 import Web from "../icons/web.tsx";
 import SiteData from "@/customization/siteData.json"
 ---
-<div class="col-span-1 bg-primary-300 rounded-[30px] px-8 py-[76px] flex flex-col gap-[30px] w-full">
+<div class="col-span-1 bg-primary-300 rounded-[30px] px-8 py-[76px] flex flex-col gap-[30px] w-full relative before:bg-[url('/bubbles.png')] overflow-hidden before:absolute before:bottom-0 before:left-0 before:w-[512px] before:h-[512px] before:opacity-10 before:z-[0]">
+  <div>
+    <h2 class="text-[15px] text-center capitalize font-dm tracking-wide lg:max-w-[60%] md:text-[20px] mx-auto text-slate-500">Interested in working with us?</h2>
+    <h3
+      class = "text-[40px] text-center capitalize font-dm tracking-wide lg:max-w-[60%] md:text-[45px] mx-auto"
+    >Connect with us.</h3>
+  </div>
   <h5 class="flex flex-col xl:flex-row gap-4 items-center text-xl font-jost tracking-tight">
   {" "}
   <Mail /> {SiteData.business_email}
