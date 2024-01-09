@@ -39,7 +39,7 @@ const ContactForm = () => {
         </label>
         <textarea
           name="message"
-          className="col-span-2 border-b w-full border-black outline-none py-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"
+          className="col-span-2 border-[1px] border-solid rounded-lg w-full border-black outline-none p-3 text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"
           cols={30}
           rows={10}
           placeholder="Hello, I am interested in..."

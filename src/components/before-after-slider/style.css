@@ -32,7 +32,6 @@ input[type="range"] {
 }
 
 input[type="range"]::-moz-range-thumb {
-  background-color: #4CAF50;
   border: var(--borderStyle); 
   border-radius: var(--bRadius); 
   height: var(--thumb-height);
@@ -43,9 +42,8 @@ input[type="range"]::-moz-range-thumb {
 
 input[type="range"]::-moz-range-track {
   width: 100%;
-  height: 5px;
+  height: 3px;
   background-color: #ccc;
-  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -55,7 +53,6 @@ input[type="range"] {
 }
 
 input[type="range"]::-ms-thumb {
-  background-color: #4CAF50;
   border: var(--borderStyle); 
   border-radius: var(--bRadius); 
   height: var(--thumb-height);
@@ -68,7 +65,6 @@ input[type="range"]::-ms-track {
   width: 100%;
   height: 5px;
   background-color: #ccc;
-  border-radius: 3px;
   cursor: pointer;
 }
 
